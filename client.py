@@ -8,11 +8,6 @@ def main():
     client.connect((host, port))
     print('connected')
     filename = 'file_to_send.txt'
-    # filename = '2Kc75rfp4xE.jpg'
-    # filename = '4k.mp4'
-    # filename = 'server.py'
-    # filename = 'ser1ver.py'
-    # filename = 'C:/Users/timat/.gitconfig'
     filename = filename.replace('../', '')
     client.sendall(filename.encode())
     filename = 'received_' + filename
